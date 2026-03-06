@@ -1,0 +1,13 @@
+- name: Install packages
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: Install packages using loop
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: installed
+      loop:
+        - nginx
+        - git
+        - python3
