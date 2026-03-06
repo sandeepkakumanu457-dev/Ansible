@@ -1,0 +1,14 @@
+- name : kinkari
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: "Ansible"
+      prompt: "Enter the course name"
+      private: false
+    - name: "trainer"
+      prompt: "Enter the trainer name"
+      private: false
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "hello all, welcome to {{ Ansible }} course training by {{ trainer }}."
