@@ -1,0 +1,11 @@
+- name: My Play
+  hosts: local
+  connection: local
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "Hello, Ansible!"
+
+    - name: print message again
+      ansible.builtin.debug:
+        msg: "Hello, Ansible again!"
