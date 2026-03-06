@@ -1,0 +1,21 @@
+- name: Install and un instaall packages using loop
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: Install packages using loop
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: installed
+      loop:
+        - nginx
+        - git
+        - python3
+
+    - name: Uninstall packages using loop
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - nginx
+        - git
