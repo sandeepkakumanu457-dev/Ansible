@@ -1,0 +1,9 @@
+- name : sandeep
+  hosts: local
+  connection: local
+  vars_files:
+    - course.yaml
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: HELLO all, welcome to {{ COURSE }} course training by {{ TRAINER }}.
