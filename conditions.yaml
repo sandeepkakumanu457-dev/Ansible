@@ -1,5 +1,6 @@
 - name: Install nginx
-  hosts: hosts
+  hosts: local
+  connection: local
   become: yes
   tasks:
     - name: Install nginx if RedHat based system
