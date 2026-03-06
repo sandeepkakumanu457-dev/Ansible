@@ -1,6 +1,6 @@
 - name: Install nginx
-  hosts: local
-  connection: local
+  hosts: all
+ 
   become: yes
   tasks:
     - name: Install nginx if RedHat based system
@@ -13,4 +13,4 @@
       ansible.builtin.service:
         name: nginx
         state: started
-      when: ansible_os_family == "RedHat"
+     
