@@ -6,7 +6,8 @@
     - name: Install nginx if RedHat based system
       ansible.builtin.dnf:
         name: nginx
-        state: present
+        state: installed
+      when: ansible_os_family == "RedHat"
 
     - name: Start nginx service
       ansible.builtin.service:
