@@ -6,5 +6,8 @@
    TRAINER: "Mounika"
   tasks:
     - name: print message
+      vars:
+        COURSE: "Ansible"
+        TRAINER: "sandeep"
       ansible.builtin.debug:
         msg: HELLO all, welcome to {{ COURSE }} course training by {{ TRAINER }}. 
