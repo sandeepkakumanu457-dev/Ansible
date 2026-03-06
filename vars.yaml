@@ -2,12 +2,9 @@
   hosts: local
   connection: local
   vars:
-  COURSE: "Ansible"
-  TRAINER: "Mounika"
-
-
-  message: "Hello, Ansible!"
+   COURSE: "Ansible"
+   TRAINER: "Mounika"
   tasks:
     - name: print message
       ansible.builtin.debug:
-        msg: HELLO all, welcome to {{ COURSE }} training by {{ TRAINER }}. {{ message }}
+        msg: HELLO all, welcome to {{ COURSE }} course training by {{ TRAINER }}. 
