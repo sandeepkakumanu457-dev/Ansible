@@ -1,5 +1,5 @@
 - name: Install and un instaall packages using loop
-  hosts: local
+  hosts: all
   connection: local
   become: yes
   tasks:
@@ -18,4 +18,4 @@
         state: absent
       loop:
         - nginx
-        - git
+        
